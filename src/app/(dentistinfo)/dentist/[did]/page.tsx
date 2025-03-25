@@ -34,13 +34,12 @@ export default async function DentistDetailPage({params}: {params:{did:string}})
                     <p className="mt-5">Area of Expertise : {dentist.areaofexpertise}</p>
                     
                         <div className="mt-5">Rating : <Rating name="read-only" value={dentist.ratings} readOnly /></div>
-                        <div className="mb-0">
+
                         <Link href={`/booking?id=${params.did}`}>
                         <button className="block rounded-md bg-[#0e2f5f] hover:bg-[#c5d9f3] px-3 py-1 text-white shadow-sm">
                             Make Appointment
                         </button>
                         </Link>
-                    </div>
                 </div>
                     
                     

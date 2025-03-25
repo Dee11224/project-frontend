@@ -8,7 +8,7 @@ export default function DentistCard(
         // const [rating, setRating] = useState<number | null>(0);
     return(
         <InteractiveCard dentName={dentName}>
-            <div className="flex-row m-30 w-full">
+            <div className="flex-row space-around pb-5 w-full">
                 <Image
                     // src={imgSrc}
                     src='/img/cover.jpg'
@@ -19,8 +19,7 @@ export default function DentistCard(
 
                  
                 />
-
-                <div className="inline text-left ml-10 mt-1 text-black ">
+                <div className="inline text-left ml-10 mt-0 text-black ">
                     <div className="flex justify-between items-center ">
                         <h1 className="ml-10 text-xl font-bold ">{dentName}</h1>
                         <div className="absolute-right">
@@ -36,9 +35,9 @@ export default function DentistCard(
                 <div className="mt-0 flex justify-left ml-10">
                     { 
                         rating!==0? 
-                            <div className="mt-0 text-md font-bold">
-                                Rating : <Rating value={rating} onClick={(e)=>{e.stopPropagation();e.preventDefault();}} readOnly />
-
+                            <div className="mt-0 text-md font-semibold text-black pt-0 flex flex-row">
+                                <div>Rating : </div>
+                                <Rating value={rating} onClick={(e)=>{e.stopPropagation();e.preventDefault();}} className="py-0" readOnly />
                                 </div>
                             
                             
